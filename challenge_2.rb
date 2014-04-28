@@ -24,6 +24,7 @@ principal_amount = 100000.0
 #   For each option, tell the user how much the monthly payment will be to that bank.
 #   Re-use the pmt method that you defined in Challenge 1.
 
-# ====================
-# Your code goes here.
-# ====================
+loan_quotes.each do |bank_quote|
+  bank_payment = pmt(bank_quote["rate"], number_of_payments, principal_amount)
+  puts "Each payment for #{bank_quote["bank"]} will be #{bank_payment}"
+end
